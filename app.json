@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "billCollectorApp",
+    "slug": "billCollectorApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "billCollectorApp"
+}
