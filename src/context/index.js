@@ -6,7 +6,7 @@ const MyContext = createContext();
 const MyProvider = ({ children }) => {
     const [state, setState] = useState({
         stage: 1,
-        players: ['Blud', 'Dawg'],
+        players: [],
         result: ''
     });
 
