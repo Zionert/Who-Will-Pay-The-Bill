@@ -1,8 +1,18 @@
 import { registerRootComponent } from 'expo';
-
+import { forwardRef } from 'react';
+import React from 'react';
 import App from './App';
 
-// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
-// It also ensures that whether you load the app in Expo Go or in a native build,
-// the environment is set up appropriately
-registerRootComponent(App);
+import Toast from 'react-native-toast-message';
+import { MyProvider } from './src/context';
+
+const ToastWrapper = forwardRef((props, ref) => {
+  return <Toast {...props} ref={ref} />;
+});
+
+registerRootComponent(() => (
+  <MyProvider> 
+    <App />
+    <ToastWrapper InnerRef={(ref) => Toast.setRef(ref)} />
+  </MyProvider>
+));
